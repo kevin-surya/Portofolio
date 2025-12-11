@@ -175,8 +175,8 @@ header {
 /* Foto Profil */
 .profile-img {
     /* Ukuran foto dikurangi drastis dari 400px ke 320px */
-    width: 400px; 
-    height: 400px;
+    width: 350px; 
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
