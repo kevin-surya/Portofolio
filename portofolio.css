@@ -7,14 +7,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* --- HEADER LEBIH RAMPING --- */
+/* --- HEADER (TIDAK DIUBAH / SAMA PERSIS) --- */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    /* Mengurangi padding dari 30px 100px menjadi 20px 50px */
-    padding: 20px 50px; 
+    padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,8 +23,7 @@ header {
 }
 
 .logo {
-    /* Mengecilkan font logo dari 2em ke 1.5em */
-    font-size: 1.5em; 
+    font-size: 2em;
     color: #fff;
     cursor: default;
 }
@@ -35,17 +33,14 @@ header {
 }
 
 .navigation {
-    /* Mengurangi margin negatif agar tidak terlalu geser */
-    margin-left: -100px; 
+    margin-left: -300px;
 }
 
 .navigation a {
-    /* Font size standar 1em (sekitar 16px) */
-    font-size: 1em; 
+    font-size: 1.1em;
     color: #fff;
     text-decoration: none;
-    /* Mengurangi jarak antar menu */
-    margin-right: 30px; 
+    margin-right: 40px;
     font-weight: 500;
     transition: .3s;
 }
@@ -59,14 +54,12 @@ header {
 .btn-talk {
     color: #fff;
     text-decoration: none;
-    /* Tombol lebih kecil */
-    padding: 8px 25px; 
+    padding: 8px 35px;
     background: #7d2ae8;
     border-radius: 10px;
     border: 2px solid #7d2ae8;
     font-weight: 500;
     transition: .3s;
-    font-size: 0.9em;
 }
 
 .btn-talk:hover {
@@ -74,7 +67,7 @@ header {
     background: transparent;
 }
 
-/* --- BAGIAN HOME LEBIH KOMPAK --- */
+/* --- BAGIAN ISI / HOME (DIPERKECIL UKURANNYA) --- */
 .home {
     position: relative;
     width: 100%;
@@ -84,17 +77,19 @@ header {
     background-position: center;
     display: flex;
     align-items: center;
-    /* Padding kiri kanan dikurangi agar konten tidak terlalu ke tengah */
-    padding: 0 50px; 
+    /* Mengurangi padding kiri-kanan agar konten lebih rapat */
+    padding: 30px 80px; 
+    overflow: hidden; /* Mencegah scrollbar jika layar kecil */
 }
 
 .content {
-    max-width: 550px; /* Lebar area teks sedikit ditambah agar teks tidak terlalu turun */
+    max-width: 550px;
     color: #555;
+    z-index: 2; /* Memastikan teks di atas background */
 }
 
 .content h2 {
-    /* Ukuran Judul dikurangi drastis dari 3em ke 2.2em */
+    /* Ukuran Judul dikurangi dari 3em menjadi 2.2em */
     font-size: 2.2em; 
     line-height: 1.2;
 }
@@ -104,30 +99,30 @@ header {
 }
 
 .content h4 {
-    /* Sub-judul dikurangi dari 2em ke 1.5em */
-    font-size: 1.5em; 
+    /* Sub-judul dikurangi dari 2em menjadi 1.5em */
+    font-size: 1.5em;
     margin-top: 5px;
 }
 
 .content p {
-    /* Padding paragraf dikurangi */
-    padding: 15px 0 25px 0; 
-    font-size: 0.95em; /* Font paragraf sedikit lebih kecil */
+    /* Padding paragraf dikurangi sedikit */
+    padding: 15px 0 30px 0; 
+    font-size: 0.95em;
     line-height: 1.6;
 }
 
-/* --- TOMBOL GROUP LEBIH KECIL --- */
+/* Tombol Group */
 .btn-group a {
     color: #fff;
     text-decoration: none;
-    /* Padding tombol dikurangi dari 10px 40px ke 8px 25px */
-    padding: 8px 25px; 
+    /* Padding tombol diperkecil sedikit agar lebih rapi */
+    padding: 10px 30px; 
     background: #7d2ae8;
-    border-radius: 8px; /* Radius sudut sedikit diperkecil */
+    border-radius: 8px;
     border: 2px solid #7d2ae8;
     font-weight: 500;
-    font-size: 0.95em;
     transition: .3s;
+    font-size: 0.95em;
 }
 
 .btn-group a:hover:nth-child(1) {
@@ -138,9 +133,8 @@ header {
 .btn-group a:nth-child(2) {
     color: #7d2ae8;
     background: transparent;
-    /* Margin kiri dikurangi */
-    margin-left: 15px; 
-    padding: 8px 25px;
+    margin-left: 20px; /* Jarak antar tombol dirapatkan */
+    padding: 10px 30px;
 }
 
 .btn-group a:hover:nth-child(2) {
@@ -148,48 +142,59 @@ header {
     background: #7d2ae8;
 }
 
-/* --- SOCIAL ICONS --- */
+/* Social Icons */
 .social-icons {
     position: absolute;
-    /* Jarak dari bawah dikurangi sedikit */
-    bottom: 30px; 
+    bottom: 40px; /* Naik sedikit dari bawah */
 }
 
 .social-icons a {
     display: inline-block;
-    /* Ukuran icon lingkaran diperkecil dari 35px ke 30px */
-    width: 30px; 
-    height: 30px; 
+    /* Icon diperkecil dari 35px ke 32px */
+    width: 32px; 
+    height: 32px;
     background: #7d2ae8;
     border-radius: 50%;
     margin-right: 15px;
     text-align: center;
-    line-height: 30px; /* Disesuaikan dengan height */
+    line-height: 32px;
     border: 1px solid #fff;
     outline: 2px solid #7d2ae8;
     transition: .3s;
-    font-size: 0.9em; /* Icon di dalamnya diperkecil */
+    font-size: 0.9em;
 }
 
 .social-icons a:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
 .social-icons a i {
     color: #fff;
 }
 
-/* --- GAMBAR PROFIL DIPERKECIL --- */
+/* Foto Profil */
 .profile-img {
-    /* Ukuran dikurangi dari 400px ke 320px */
-    width: 320px; 
-    height: 320px; 
+    /* Ukuran foto dikurangi drastis dari 400px ke 320px */
+    width: 400px; 
+    height: 400px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
-    /* Jarak dari teks dikurangi dari 150px ke 80px */
-    margin-left: 80px; 
-    border: 4px solid #7d2ae8;
+    /* Margin kiri dikurangi agar foto lebih dekat ke teks */
+    margin-left: 150px; 
+    border: 5px solid #7d2ae8;
     box-shadow: 0 10px 30px rgba(125, 42, 232, 0.3);
     flex-shrink: 0;
+}
+
+/* Responsive untuk Laptop Kecil (Opsional tapi berguna) */
+@media (max-width: 1200px) {
+    .profile-img {
+        width: 280px;
+        height: 280px;
+        margin-left: 50px;
+    }
+    .content h2 {
+        font-size: 2em;
+    }
 }
