@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+}
+
+/* --- HEADER (Sama Persis) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(135deg, #965ae4 0%, #7d2ae8 100%);
+    box-shadow: 0 5px 20px rgba(125, 42, 232, 0.3);
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    cursor: default;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.navigation {
+    margin-left: -300px;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 180px 20px 50px; /* Padding Top besar untuk Header Fixed */
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+.section-title span {
+    color: #7d2ae8;
+}
+
+/* --- Layout Grid: Kiri Info, Kanan Form --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info lebih kecil, Form lebih lebar */
+    gap: 40px;
+    align-items: flex-start; /* Agar rata atas */
+}
+
+/* --- KOLOM KIRI: CONTACT INFO --- */
+.contact-info {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.contact-info h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-desc {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+}
+
+/* Item Info (Icon + Text) */
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: #f3eafd; /* Ungu muda banget */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    color: #7d2ae8;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.info-item:hover .icon-box {
+    background: #7d2ae8;
+    color: #fff;
+}
+
+.info-text h4 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.info-text span {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Social Links di Contact */
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #7d2ae8;
+    border-radius: 50%;
+    color: #7d2ae8;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    background: #7d2ae8;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* --- Quick Action Box (Pengganti Form) --- */
+.quick-action-box {
+    background: #fff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Agar tingginya mengikuti info di sebelahnya */
+}
+
+.action-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.action-header h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.action-header p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- Styling Tombol Direct --- */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-direct {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #eee;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icon Bulat di Kiri */
+.btn-direct .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-right: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+/* Teks Label */
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Mengisi ruang tengah */
+}
+
+.text-wrapper .label {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.text-wrapper .sub-label {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 3px;
+}
+
+/* Panah di Kanan */
+.arrow-icon {
+    color: #ccc;
+    transition: 0.3s;
+}
+
+/* --- Hover Effects --- */
+
+/* 1. Hover WhatsApp (Hijau) */
+.btn-wa:hover {
+    background: #e6fffa;
+    border-color: #25D366;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+}
+.btn-wa:hover .icon-wrapper {
+    background: #25D366;
+    color: #fff;
+}
+.btn-wa:hover .text-wrapper .label {
+    color: #25D366;
+}
+
+/* 2. Hover Email (Ungu - Brand Color) */
+.btn-email:hover {
+    background: #f3eafd;
+    border-color: #7d2ae8;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(125, 42, 232, 0.2);
+}
+.btn-email:hover .icon-wrapper {
+    background: #7d2ae8;
+    color: #fff;
+}
+.btn-email:hover .text-wrapper .label {
+    color: #7d2ae8;
+}
+
+/* 3. Hover Meeting (Biru) */
+.btn-meet:hover {
+    background: #e3f2fd;
+    border-color: #2196f3;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(33, 150, 243, 0.2);
+}
+.btn-meet:hover .icon-wrapper {
+    background: #2196f3;
+    color: #fff;
+}
+.btn-meet:hover .text-wrapper .label {
+    color: #2196f3;
+}
+
+/* Animasi Panah Kanan */
+.btn-direct:hover .arrow-icon {
+    transform: translateX(5px);
+    color: inherit; /* Mengikuti warna teks hover */
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+/* Styling Input & Textarea */
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: #f9f9f9;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-box textarea {
+    height: 150px;
+    resize: none; /* Mencegah user mengubah ukuran box sesuka hati */
+}
+
+/* Efek saat diklik (Focus) */
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #7d2ae8;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(125, 42, 232, 0.1);
+}
+
+/* Tombol Kirim */
+.btn-send {
+    display: inline-block;
+    padding: 14px 40px;
+    background: #7d2ae8;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(125, 42, 232, 0.3);
+}
+
+.btn-send:hover {
+    background: #6a24c5;
+    transform: translateY(-3px);
+}
+
+.btn-send i {
+    margin-left: 8px;
+}
+
+/* --- Footer --- */
+.footer {
+    background: #555;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 991px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Stack jadi 1 kolom */
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation {
+        margin-left: 0;
+    }
+    
+    .navigation a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .contact-section {
+        padding-top: 220px;
+    }
+
+    .contact-info, .contact-form-box {
+        padding: 30px 20px; /* Kurangi padding di HP */
+    }
+}

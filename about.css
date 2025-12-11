@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+}
+
+/* --- HEADER (Copy dari Projects agar konsisten) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(135deg, #965ae4 0%, #7d2ae8 100%);
+    box-shadow: 0 5px 20px rgba(125, 42, 232, 0.3);
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    cursor: default;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.navigation {
+    margin-left: -300px;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* --- ABOUT SECTION --- */
+.about-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* Padding disesuaikan agar tidak tertutup header fixed */
+    padding: 180px 20px 50px; 
+}
+
+.about-container {
+    max-width: 1000px; /* Lebar konten lebih kecil sedikit dari projects agar fokus */
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+.section-title span {
+    color: #7d2ae8;
+}
+
+/* --- 1. PROFILE CARD (Bagian Atas) --- */
+.profile-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(125, 42, 232, 0.15);
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-image {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #7d2ae8; /* Border ungu branding */
+    box-shadow: 0 0 20px rgba(125, 42, 232, 0.3);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-text h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    display: inline-block;
+    color: #7d2ae8;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.profile-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Social Icons di About */
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #7d2ae8;
+    border-radius: 50%;
+    color: #7d2ae8;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    background: #7d2ae8;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* --- 2. GRID INFO (Education & Skills) --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 Kolom */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    height: 100%; /* Agar tinggi kartu sama */
+}
+
+.info-card .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.info-card .card-header i {
+    font-size: 1.8em;
+    color: #7d2ae8;
+    margin-right: 15px;
+}
+
+.info-card .card-header h3 {
+    font-size: 1.5em;
+    color: #444;
+}
+
+/* List Style untuk Education */
+.list-item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #7d2ae8; /* Garis ungu di kiri */
+}
+
+.list-item h4 {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.list-item span {
+    font-size: 0.9em;
+    color: #777;
+    display: block;
+    margin: 3px 0;
+}
+
+.year {
+    font-size: 0.85em;
+    color: #7d2ae8;
+    font-weight: 600;
+}
+
+/* Skill Badges */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-badge {
+    background: #f3eafd; /* Warna ungu sangat muda */
+    color: #7d2ae8;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9em;
+    border: 1px solid #7d2ae8;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.skill-badge:hover {
+    background: #7d2ae8;
+    color: #fff;
+}
+
+/* --- CV Button --- */
+.cv-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-cv {
+    display: inline-block;
+    padding: 12px 40px;
+    background: #7d2ae8;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(125, 42, 232, 0.4);
+}
+
+.btn-cv:hover {
+    background: #6a24c5;
+    transform: translateY(-3px);
+}
+
+.btn-cv i {
+    margin-left: 8px;
+}
+
+/* --- Footer --- */
+.footer {
+    background: #555;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation {
+        margin-left: 0;
+    }
+    
+    .navigation a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .about-section {
+        padding-top: 220px;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .profile-text p {
+        text-align: center;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr; /* Stack Education & Skills jadi 1 kolom di HP */
+    }
+}

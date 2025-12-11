@@ -1,0 +1,252 @@
+/* --- Global Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+}
+
+/* --- HEADER (Disamakan dengan CSS Home) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /* Gradient Purple Background */
+    background: linear-gradient(135deg, #965ae4 0%, #7d2ae8 100%);
+    box-shadow: 0 5px 20px rgba(125, 42, 232, 0.3);
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #ffffff; /* Mengubah span 'Kevin's' menjadi putih agar terlihat di background ungu */
+}
+
+.navigation {
+    margin-left: -300px; /* Sesuai request (layout home) */
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+/* CATATAN: Karena background header ungu, hover ungu (#7d2ae8) akan tidak terlihat.
+   Saya ubah sedikit menjadi warna gelap atau putih transparan agar ada efeknya. 
+   Jika ingin tetap ungu sama persis, kembalikan color ke #7d2ae8. */
+.navigation a:hover,
+.navigation a.active {
+    color: #e0e0e0; /* Putih agak abu saat hover */
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* --- PROJECTS SECTION --- */
+.projects-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* Padding Top diperbesar jadi 150px karena Header sekarang Fixed dan besar */
+    padding: 180px 0 50px; 
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #555;
+}
+
+.section-title span {
+    color: #7d2ae8;
+}
+
+/* --- GRID SYSTEM (1 Baris 1 Kartu) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- CARD DESIGN --- */
+.project-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(125, 42, 232, 0.2);
+    border-color: #7d2ae8;
+}
+/* Container untuk tombol Lihat Selengkapnya */
+.view-more-container {
+    text-align: center; /* Membuat tombol berada di tengah */
+    margin-top: 50px;   /* Memberi jarak dari kartu terakhir */
+}
+
+/* Modifikasi khusus untuk tombol ini */
+.view-more-btn {
+    display: inline-block; /* Agar lebar tombol mengikuti konten, tidak full width */
+    min-width: 250px;      /* Lebar minimal agar terlihat proporsional */
+    cursor: pointer;
+}
+
+/* Efek Hover (opsional, jika ingin sedikit berbeda saat disorot) */
+.view-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(125, 42, 232, 0.3);
+}
+
+/* 1. Header Kartu */
+.card-header {
+    padding: 25px 30px 15px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* 2. Gambar Kartu */
+.card-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+/* 3. Konten Kartu */
+.card-content {
+    padding: 30px;
+    background: #fff;
+    text-align: left;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* --- Tombol --- */
+.project-link {
+    display: inline-block;
+    color: #fff;
+    background: #7d2ae8;
+    padding: 12px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 2px solid #7d2ae8;
+    text-align: center;
+}
+
+.project-link:hover {
+    background: transparent;
+    color: #7d2ae8;
+}
+
+.project-link i {
+    margin-left: 10px;
+}
+
+/* --- Footer --- */
+.footer {
+    background: #555;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 991px) {
+    header {
+        padding: 20px 50px;
+    }
+    .navigation {
+        margin-left: 0; /* Reset margin aneh di mobile */
+    }
+    .section-title {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 20px;
+        flex-direction: column; /* Stack logo dan nav di HP */
+        gap: 15px;
+    }
+    
+    .navigation a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .projects-section {
+        padding-top: 220px; /* Tambah jarak karena header makin tinggi di HP */
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .project-link {
+        width: 100%;
+    }
+}
